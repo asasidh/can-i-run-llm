@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react'
 import './App.css'
 import axios from 'axios'
 import Select from 'react-select'
+import { Analytics } from '@vercel/analytics/react'
 
 export default function App() {
   // Add console log to check component mounting
@@ -476,6 +477,9 @@ export default function App() {
         <p>This tool provides estimates based on general requirements. Actual performance may vary.</p>
         <p>Data sourced from HuggingFace and model documentation.</p>
       </footer>
+      
+      {/* Add Vercel Analytics */}
+      <Analytics />
     </div>
   )
 }
